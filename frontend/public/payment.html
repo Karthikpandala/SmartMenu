@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Menu | Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="cart.html" class="text-gray-600 hover:text-gray-900">
+                        <i data-feather="arrow-left" class="mr-2"></i>
+                    </a>
+                    <span class="text-lg font-medium text-gray-800">Payment</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-500">The Urban Eatery</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <!-- Order Summary -->
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Order Summary</h2>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Truffle Arancini</span>
+                        <span class="text-gray-900">$12.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Burrata Salad</span>
+                        <span class="text-gray-900">$14.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Chocolate Soufflé</span>
+                        <span class="text-gray-900">$10.00</span>
+                    </div>
+                    <div class="flex justify-between border-t border-gray-200 pt-3 mt-2">
+                        <span class="font-medium text-gray-900">Total</span>
+                        <span class="font-medium text-gray-900">$38.88</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <div class="p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Payment Details</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" id="card-number" name="card-number" class="focus:ring-gray-500 focus:border-gray-500 block w-full pl-4 pr-12 py-3 border-gray-300 rounded-md" placeholder="1234 5678 9012 3456">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i data-feather="credit-card" class="text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="expiry" class="block text-sm font-medium text-gray-700">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" class="focus:ring-gray-500 focus:border-gray-500 block w-full px-4 py-3 border-gray-300 rounded-md" placeholder="MM/YY">
+                        </div>
+                        <div>
+                            <label for="cvc" class="block text-sm font-medium text-gray-700">CVC</label>
+                            <input type="text" id="cvc" name="cvc" class="focus:ring-gray-500 focus:border-gray-500 block w-full px-4 py-3 border-gray-300 rounded-md" placeholder="CVC">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name on Card</label>
+                        <input type="text" id="name" name="name" class="focus:ring-gray-500 focus:border-gray-500 block w-full px-4 py-3 border-gray-300 rounded-md" placeholder="Full Name">
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="save-card" name="save-card" type="checkbox" class="h-4 w-4 text-gray-600 focus:ring-gray-500 border-gray-300 rounded">
+                        <label for="save-card" class="ml-2 block text-sm text-gray-700">
+                            Save card for future payments
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Pay Now Button -->
+        <div class="mt-8">
+            <a href="confirmation.html" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                Pay $38.88
+            </a>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

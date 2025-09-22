@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Menu | Order Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i data-feather="grid" class="text-gray-600 mr-2"></i>
+                    <span class="text-xl font-medium text-gray-800">QRMenu</span>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                <i data-feather="check" class="h-6 w-6 text-green-600"></i>
+            </div>
+            <h1 class="mt-4 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Order Confirmed!</h1>
+            <p class="mt-4 text-lg text-gray-600">Your order has been placed successfully at <span class="font-medium text-gray-900">The Urban Eatery</span>.</p>
+            <div class="mt-8 bg-white rounded-lg shadow-sm p-6 max-w-md mx-auto">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Order Details</h2>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Order #</span>
+                        <span class="text-gray-900">QRM-28495</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Table</span>
+                        <span class="text-gray-900">12</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Time</span>
+                        <span class="text-gray-900">12:45 PM</span>
+                    </div>
+                    <div class="flex justify-between border-t border-gray-200 pt-3 mt-2">
+                        <span class="font-medium text-gray-900">Total</span>
+                        <span class="font-medium text-gray-900">$38.88</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="text-gray-600">Your food will be served shortly. Thank you for your order!</p>
+            </div>
+            <div class="mt-10">
+                <a href="index.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
