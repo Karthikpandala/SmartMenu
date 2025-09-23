@@ -1,36 +1,29 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
 import { Restaurant } from '../../restaurants/entities/restaurant.entity';
+// import { UserRole } from '../enums/user-role.enum';
 
-export enum UserRole {
-  CUSTOMER = 'customer',
-  STAFF = 'staff',
-  RESTAURANT_ADMIN = 'restaurant_admin',
-  PLATFORM_ADMIN = 'platform_admin',
-}
-
-@Entity('users')
+@Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column({ unique: true })
-  email: string;
+  id!: number;
 
   @Column()
-  password: string;
+  email!: string;
 
-  @Column({ type: 'enum', enum: UserRole })
-  role: UserRole;
+  @Column()
+  password!: string;
 
-  @ManyToOne(() => Restaurant, restaurant => restaurant.users, { nullable: true })
-  restaurant: Restaurant;
 
-  @Column({ nullable: true })
-  restaurant_id: number;
 
-  @CreateDateColumn()
-  created_at: Date;
+  @ManyToOne(() => Restaurant, restaurant => restaurant.users)
+  restaurant!: Restaurant;
 
-  @UpdateDateColumn()
-  updated_at: Date;
+  @Column()
+  restaurant_id!: number;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  created_at!: Date;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP', onUpdate: 'CURRENT_TIMESTAMP' })
+  updated_at!: Date;
 }

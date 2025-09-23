@@ -8,37 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
-const auth_module_1 = require("./auth/auth.module");
+const config_1 = require("@nestjs/config");
+// Import your feature modules here
 const users_module_1 = require("./users/users.module");
-const restaurants_module_1 = require("./restaurants/restaurants.module");
 const menu_module_1 = require("./menu/menu.module");
 const orders_module_1 = require("./orders/orders.module");
-const payments_module_1 = require("./payments/payments.module");
-const config_1 = require("@nestjs/config");
+const analytics_module_1 = require("./analytics/analytics.module");
+// import { PaymentsModule } from './payments/payments.module'; // ❌ Disabled for now
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            config_1.ConfigModule.forRoot({ isGlobal: true }),
-            typeorm_1.TypeOrmModule.forRoot({
-                type: 'postgres',
-                host: process.env.DB_HOST || 'localhost',
-                port: parseInt(process.env.DB_PORT) || 5432,
-                username: process.env.DB_USER || 'postgres',
-                password: process.env.DB_PASS || 'postgres',
-                database: process.env.DB_NAME || 'qr_menu',
-                entities: [__dirname + '/**/*.entity{.ts,.js}'],
-                synchronize: true, // Auto-create tables in dev
+            config_1.ConfigModule.forRoot({
+                isGlobal: true,
             }),
-            auth_module_1.AuthModule,
+            // ❌ Database disabled (TypeORM removed)
             users_module_1.UsersModule,
-            restaurants_module_1.RestaurantsModule,
             menu_module_1.MenuModule,
             orders_module_1.OrdersModule,
-            payments_module_1.PaymentsModule,
+            analytics_module_1.AnalyticsModule,
+            // PaymentsModule, // disabled
         ],
+        controllers: [],
+        providers: [],
     })
 ], AppModule);

@@ -13,52 +13,39 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersService = void 0;
+// src/users/users.service.ts
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
-const typeorm_2 = require("typeorm");
+const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./entities/user.entity");
-const bcrypt = require("bcrypt");
+const typeorm_2 = require("@nestjs/typeorm");
 let UsersService = class UsersService {
     constructor(userRepo) {
         this.userRepo = userRepo;
     }
-    async createUser(data) {
-        const exists = await this.userRepo.findOne({ where: { email: data.email } });
-        if (exists)
-            throw new common_1.BadRequestException('Email already exists');
-        const hashed = await bcrypt.hash(data.password, 10);
-        const user = this.userRepo.create({ ...data, password: hashed });
-        return this.userRepo.save(user);
-    }
     async findByEmail(email) {
-        return this.userRepo.findOne({ where: { email } });
-    }
-    async findById(id) {
-        const user = await this.userRepo.findOne({ where: { id } });
-        if (!user)
-            throw new common_1.NotFoundException('User not found');
-        return user;
+        return this.userRepo.findOneBy({ email });
     }
     async getAllUsers() {
-        return this.userRepo.find({ relations: ['restaurant'] });
+        return this.userRepo.find();
     }
-    async updateUser(id, update) {
-        const user = await this.findById(id);
-        if (update.password) {
-            update.password = await bcrypt.hash(update.password, 10);
-        }
-        Object.assign(user, update);
-        return this.userRepo.save(user);
+    async findById(id) {
+        return this.userRepo.findOneBy({ id });
+    }
+    async createUser(data) {
+        return this.userRepo.save(data);
+    }
+    async updateUser(id, data) {
+        await this.userRepo.update(id, data);
+        return this.findById(id);
     }
     async deleteUser(id) {
-        const result = await this.userRepo.delete(id);
-        if (result.affected === 0)
-            throw new common_1.NotFoundException('User not found');
+        await this.userRepo.delete(id);
+        return { deleted: true };
     }
 };
 exports.UsersService = UsersService;
 exports.UsersService = UsersService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(user_entity_1.User)),
-    __metadata("design:paramtypes", [typeorm_2.Repository])
+    __param(0, (0, typeorm_2.InjectRepository)(user_entity_1.User)),
+    __metadata("design:paramtypes", [typeorm_1.Repository])
 ], UsersService);

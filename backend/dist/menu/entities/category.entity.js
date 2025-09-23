@@ -14,6 +14,9 @@ const typeorm_1 = require("typeorm");
 const item_entity_1 = require("./item.entity");
 const restaurant_entity_1 = require("../../restaurants/entities/restaurant.entity");
 let Category = class Category {
+    constructor() {
+        this.is_active = true;
+    }
 };
 exports.Category = Category;
 __decorate([

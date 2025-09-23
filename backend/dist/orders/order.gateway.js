@@ -13,17 +13,8 @@ exports.OrdersGateway = void 0;
 const websockets_1 = require("@nestjs/websockets");
 const socket_io_1 = require("socket.io");
 let OrdersGateway = class OrdersGateway {
-    afterInit() {
-        console.log('Orders WebSocket initialized');
-    }
-    handleConnection(client) {
-        console.log(`Client connected: ${client.id}`);
-    }
-    handleDisconnect(client) {
-        console.log(`Client disconnected: ${client.id}`);
-    }
     emitOrderUpdate(order) {
-        this.server.emit('orderUpdated', order);
+        this.server.emit('orderUpdate', order);
     }
 };
 exports.OrdersGateway = OrdersGateway;
@@ -32,5 +23,5 @@ __decorate([
     __metadata("design:type", socket_io_1.Server)
 ], OrdersGateway.prototype, "server", void 0);
 exports.OrdersGateway = OrdersGateway = __decorate([
-    (0, websockets_1.WebSocketGateway)({ namespace: '/orders', cors: { origin: '*' } })
+    (0, websockets_1.WebSocketGateway)()
 ], OrdersGateway);

@@ -31,23 +31,15 @@ __decorate([
     __metadata("design:type", Number)
 ], Order.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, user => user.orders),
+    (0, typeorm_1.ManyToOne)(() => user_entity_1.User),
     __metadata("design:type", user_entity_1.User)
 ], Order.prototype, "customer", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], Order.prototype, "customer_id", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => restaurant_entity_1.Restaurant, restaurant => restaurant.orders),
+    (0, typeorm_1.ManyToOne)(() => restaurant_entity_1.Restaurant),
     __metadata("design:type", restaurant_entity_1.Restaurant)
 ], Order.prototype, "restaurant", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], Order.prototype, "restaurant_id", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => order_item_entity_1.OrderItem, orderItem => orderItem.order, { cascade: true }),
+    (0, typeorm_1.OneToMany)(() => order_item_entity_1.OrderItem, item => item.order, { cascade: true }),
     __metadata("design:type", Array)
 ], Order.prototype, "items", void 0);
 __decorate([
@@ -55,13 +47,13 @@ __decorate([
     __metadata("design:type", String)
 ], Order.prototype, "status", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'decimal', precision: 10, scale: 2, default: 0 }),
-    __metadata("design:type", Number)
-], Order.prototype, "total_price", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ nullable: true }),
+    (0, typeorm_1.Column)({ type: 'text', nullable: true }),
     __metadata("design:type", String)
 ], Order.prototype, "special_instructions", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'decimal', default: 0 }),
+    __metadata("design:type", Number)
+], Order.prototype, "total_price", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

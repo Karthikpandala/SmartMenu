@@ -1,36 +1,42 @@
-// src/restaurants/entities/restaurant.entity.ts
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { 
+  Entity, 
+  PrimaryGeneratedColumn, 
+  Column, 
+  OneToMany, 
+  CreateDateColumn, 
+  UpdateDateColumn 
+} from 'typeorm';
 import { User } from '../../users/entities/user.entity';
 
 @Entity('restaurants')
 export class Restaurant {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  name: string;
+  name!: string;
 
   @Column({ nullable: true })
-  description: string;
+  description?: string;
 
   @Column({ nullable: true })
-  phone: string;
+  phone?: string;
 
   @Column({ nullable: true })
-  email: string;
+  email?: string;
 
   @Column({ nullable: true })
-  upi_id: string;
+  upi_id?: string;
 
   @Column({ default: true })
-  is_active: boolean;
+  is_active!: boolean;
 
-  @OneToMany(() => User, user => user.restaurant)
-  users: User[];
+  @OneToMany(() => User, (user: User) => user.restaurant)
+  users!: User[];
 
   @CreateDateColumn()
-  created_at: Date;
+  created_at!: Date;
 
   @UpdateDateColumn()
-  updated_at: Date;
+  updated_at!: Date;
 }

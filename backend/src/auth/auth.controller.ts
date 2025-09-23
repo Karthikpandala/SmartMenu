@@ -3,8 +3,11 @@ import { AuthService } from './auth.service';
 import { IsEmail, IsString } from 'class-validator';
 
 class LoginDto {
-  @IsEmail() email: string;
-  @IsString() password: string;
+  @IsEmail()
+  email!: string;  // definite assignment assertion
+
+  @IsString()
+  password!: string;  // definite assignment assertion
 }
 
 @Controller('auth')

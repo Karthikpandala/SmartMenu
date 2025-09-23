@@ -5,7 +5,7 @@ import { OrdersController } from './orders.controller';
 import { Order } from './entities/order.entity';
 import { OrderItem } from './entities/order-item.entity';
 import { MenuModule } from '../menu/menu.module';
-import { OrdersGateway } from './orders.gateway';
+import { OrdersGateway } from './order.gateway';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Order, OrderItem]), MenuModule],

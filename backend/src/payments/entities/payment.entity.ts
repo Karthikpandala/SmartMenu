@@ -1,46 +1,45 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
-import { User } from '../../users/entities/user.entity';
-import { Order } from '../../orders/entities/order.entity';
+// import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+// import { User } from '../../users/entities/user.entity';
+// import { Order } from '../../orders/entities/order.entity';
 
-export enum PaymentStatus {
-  PENDING = 'pending',
-  COMPLETED = 'completed',
-  FAILED = 'failed',
-  CANCELLED = 'cancelled',
-}
+// export enum PaymentStatus {
+//   PENDING = 'PENDING',
+//   SUCCESS = 'SUCCESS',
+//   FAILED = 'FAILED',
+// }
 
-@Entity('payments')
-export class Payment {
-  @PrimaryGeneratedColumn()
-  id: number;
+// @Entity()
+// export class Payment {
+//   @PrimaryGeneratedColumn()
+//   id!: number;
 
-  @ManyToOne(() => User)
-  user: User;
+//   @ManyToOne(() => User, user => user.payments, { onDelete: 'CASCADE' })
+//   user!: User;
 
-  @Column()
-  user_id: number;
+//   @Column()
+//   user_id!: number;
 
-  @ManyToOne(() => Order)
-  order: Order;
+//   @ManyToOne(() => Order, { onDelete: 'CASCADE' })
+//   order!: Order;
 
-  @Column()
-  order_id: number;
+//   @Column()
+//   order_id!: number;
 
-  @Column({ type: 'decimal', precision: 10, scale: 2 })
-  amount: number;
+//   @Column()
+//   amount!: number;
 
-  @Column({ nullable: true })
-  upi_id: string; // e.g., merchant UPI ID
+//   @Column()
+//   upi_id!: string;
 
-  @Column({ nullable: true })
-  upi_transaction_ref: string; // transaction reference
+//   @Column()
+//   upi_transaction_ref!: string;
 
-  @Column({ type: 'enum', enum: PaymentStatus, default: PaymentStatus.PENDING })
-  status: PaymentStatus;
+//   @Column({ type: 'enum', enum: PaymentStatus, default: PaymentStatus.PENDING })
+//   status!: PaymentStatus;
 
-  @CreateDateColumn()
-  created_at: Date;
+//   @CreateDateColumn()
+//   created_at!: Date;
 
-  @UpdateDateColumn()
-  updated_at: Date;
-}
+//   @UpdateDateColumn()
+//   updated_at!: Date;
+// }

@@ -1,32 +1,26 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
+
+// Import your feature modules here
 import { UsersModule } from './users/users.module';
-import { RestaurantsModule } from './restaurants/restaurants.module';
 import { MenuModule } from './menu/menu.module';
 import { OrdersModule } from './orders/orders.module';
-import { PaymentsModule } from './payments/payments.module';
-import { ConfigModule } from '@nestjs/config';
+import { AnalyticsModule } from './analytics/analytics.module';
+// import { PaymentsModule } from './payments/payments.module'; // ❌ Disabled for now
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DB_HOST || 'localhost',
-      port: parseInt(process.env.DB_PORT) || 5432,
-      username: process.env.DB_USER || 'postgres',
-      password: process.env.DB_PASS || 'postgres',
-      database: process.env.DB_NAME || 'qr_menu',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, // Auto-create tables in dev
+    ConfigModule.forRoot({
+      isGlobal: true,
     }),
-    AuthModule,
+    // ❌ Database disabled (TypeORM removed)
     UsersModule,
-    RestaurantsModule,
     MenuModule,
     OrdersModule,
-    PaymentsModule,
+    AnalyticsModule,
+    // PaymentsModule, // disabled
   ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

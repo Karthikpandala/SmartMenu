@@ -8,20 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AnalyticsModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
+// ❌ Disable DB for now
+// import { TypeOrmModule } from '@nestjs/typeorm';
 const analytics_service_1 = require("./analytics.service");
 const analytics_controller_1 = require("./analytics.controller");
-const order_entity_1 = require("../orders/entities/order.entity");
-const payment_entity_1 = require("../payments/entities/payment.entity");
+// import { Order } from '../orders/entities/order.entity';
+// import { Payment } from '../payments/entities/payment.entity';
 const menu_module_1 = require("../menu/menu.module");
 const orders_module_1 = require("../orders/orders.module");
-const payments_module_1 = require("../payments/payments.module");
+// import { PaymentsModule } from '../payments/payments.module';
 let AnalyticsModule = class AnalyticsModule {
 };
 exports.AnalyticsModule = AnalyticsModule;
 exports.AnalyticsModule = AnalyticsModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([order_entity_1.Order, payment_entity_1.Payment]), menu_module_1.MenuModule, orders_module_1.OrdersModule, payments_module_1.PaymentsModule],
+        // ❌ remove TypeOrmModule + PaymentsModule
+        imports: [
+            menu_module_1.MenuModule,
+            orders_module_1.OrdersModule,
+        ],
         controllers: [analytics_controller_1.AnalyticsController],
         providers: [analytics_service_1.AnalyticsService],
     })

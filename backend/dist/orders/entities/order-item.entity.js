@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderItem = void 0;
 const typeorm_1 = require("typeorm");
 const order_entity_1 = require("./order.entity");
-const item_entity_1 = require("../../menu/entities/item.entity");
 let OrderItem = class OrderItem {
 };
 exports.OrderItem = OrderItem;
@@ -21,29 +20,25 @@ __decorate([
     __metadata("design:type", Number)
 ], OrderItem.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => order_entity_1.Order, order => order.items),
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], OrderItem.prototype, "menuItemName", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], OrderItem.prototype, "quantity", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], OrderItem.prototype, "price", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => order_entity_1.Order, order => order.items, { onDelete: 'CASCADE' }),
     __metadata("design:type", order_entity_1.Order)
 ], OrderItem.prototype, "order", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], OrderItem.prototype, "order_id", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => item_entity_1.Item),
-    __metadata("design:type", item_entity_1.Item)
-], OrderItem.prototype, "item", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], OrderItem.prototype, "item_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'int', default: 1 }),
-    __metadata("design:type", Number)
-], OrderItem.prototype, "quantity", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'decimal', precision: 10, scale: 2 }),
-    __metadata("design:type", Number)
-], OrderItem.prototype, "price", void 0);
 exports.OrderItem = OrderItem = __decorate([
-    (0, typeorm_1.Entity)('order_items')
+    (0, typeorm_1.Entity)()
 ], OrderItem);

@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrdersService = void 0;
 const common_1 = require("@nestjs/common");
@@ -19,24 +18,24 @@ const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const order_entity_1 = require("./entities/order.entity");
 const order_item_entity_1 = require("./entities/order-item.entity");
-const orders_gateway_1 = require("./orders.gateway");
+const order_gateway_1 = require("./order.gateway");
 let OrdersService = class OrdersService {
     constructor(orderRepo, orderItemRepo, ordersGateway) {
         this.orderRepo = orderRepo;
         this.orderItemRepo = orderItemRepo;
         this.ordersGateway = ordersGateway;
     }
-    async createOrder(customerId, restaurantId, items, specialInstructions) {
+    async createOrder(customer, restaurant, items, specialInstructions) {
         const order = this.orderRepo.create({
-            customer_id: customerId,
-            restaurant_id: restaurantId,
+            customer,
+            restaurant,
             status: order_entity_1.OrderStatus.PENDING,
             special_instructions: specialInstructions,
             total_price: items.reduce((sum, i) => sum + i.price * i.quantity, 0),
         });
         const savedOrder = await this.orderRepo.save(order);
         const orderItems = items.map(i => this.orderItemRepo.create({
-            order_id: savedOrder.id,
+            order: savedOrder,
             item_id: i.item_id,
             quantity: i.quantity,
             price: i.price,
@@ -60,7 +59,7 @@ let OrdersService = class OrdersService {
         const query = this.orderRepo.createQueryBuilder('order')
             .leftJoinAndSelect('order.items', 'orderItem')
             .leftJoinAndSelect('orderItem.item', 'item')
-            .where('order.restaurant_id = :restaurantId', { restaurantId });
+            .where('order.restaurant = :restaurantId', { restaurantId });
         if (status && status.length > 0) {
             query.andWhere('order.status IN (:...status)', { status });
         }
@@ -68,7 +67,6 @@ let OrdersService = class OrdersService {
     }
     async updateOrderStatus(orderId, newStatus) {
         const order = await this.getOrderById(orderId);
-        // Validate status progression
         const validNextStatuses = {
             [order_entity_1.OrderStatus.PENDING]: [order_entity_1.OrderStatus.CONFIRMED, order_entity_1.OrderStatus.CANCELLED],
             [order_entity_1.OrderStatus.CONFIRMED]: [order_entity_1.OrderStatus.PREPARING, order_entity_1.OrderStatus.CANCELLED],
@@ -82,7 +80,6 @@ let OrdersService = class OrdersService {
         }
         order.status = newStatus;
         const updatedOrder = await this.orderRepo.save(order);
-        // Notify staff/customers
         this.ordersGateway.emitOrderUpdate(updatedOrder);
         return updatedOrder;
     }
@@ -93,5 +90,6 @@ exports.OrdersService = OrdersService = __decorate([
     __param(0, (0, typeorm_1.InjectRepository)(order_entity_1.Order)),
     __param(1, (0, typeorm_1.InjectRepository)(order_item_entity_1.OrderItem)),
     __metadata("design:paramtypes", [typeorm_2.Repository,
-        typeorm_2.Repository, typeof (_a = typeof orders_gateway_1.OrdersGateway !== "undefined" && orders_gateway_1.OrdersGateway) === "function" ? _a : Object])
+        typeorm_2.Repository,
+        order_gateway_1.OrdersGateway])
 ], OrdersService);

@@ -14,7 +14,7 @@ const orders_controller_1 = require("./orders.controller");
 const order_entity_1 = require("./entities/order.entity");
 const order_item_entity_1 = require("./entities/order-item.entity");
 const menu_module_1 = require("../menu/menu.module");
-const orders_gateway_1 = require("./orders.gateway");
+const order_gateway_1 = require("./order.gateway");
 let OrdersModule = class OrdersModule {
 };
 exports.OrdersModule = OrdersModule;
@@ -22,7 +22,7 @@ exports.OrdersModule = OrdersModule = __decorate([
     (0, common_1.Module)({
         imports: [typeorm_1.TypeOrmModule.forFeature([order_entity_1.Order, order_item_entity_1.OrderItem]), menu_module_1.MenuModule],
         controllers: [orders_controller_1.OrdersController],
-        providers: [orders_service_1.OrdersService, orders_gateway_1.OrdersGateway],
+        providers: [orders_service_1.OrdersService, order_gateway_1.OrdersGateway],
         exports: [orders_service_1.OrdersService],
     })
 ], OrdersModule);
