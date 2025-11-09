@@ -81,17 +81,14 @@ export default function Home() {
                 <Heart className="text-gray-600 w-4 h-4" />
               </div>
               <div className="qr-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                <div className="bg-white p-4 rounded-lg">
-                  <img src="http://static.photos/black/200x200/1" alt="QR Code" className="w-24 h-24" />
-                  <p className="text-xs text-center mt-2 text-gray-600">Scan to view menu</p>
-                </div>
+                
               </div>
             </div>
             <div className="p-4">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="font-bold text-gray-900">The Urban Eatery</h3>
-                  <p className="text-sm text-gray-500">Modern • American • $$</p>
+                  <h3 className="font-bold text-gray-900">The Coffee House</h3>
+                  <p className="text-sm text-gray-500">Modern • American • ₹₹</p>
                 </div>
                 <div className="flex items-center text-sm text-gray-500">
                   <Star className="w-4 h-4 text-yellow-400 mr-1" />

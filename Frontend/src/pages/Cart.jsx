@@ -49,7 +49,7 @@ export default function Cart() {
                       )}
                     </div>
                   </div>
-                  <div className="text-gray-900 font-medium">${it.price.toFixed(2)}</div>
+                  <div className="text-gray-900 font-medium">₹{it.price.toFixed(2)}</div>
                 </div>
                 <div className="mt-3 flex items-center justify-between">
                   <div className="flex items-center border border-gray-300 rounded-md">
@@ -111,12 +111,12 @@ export default function Cart() {
             {[0, 0.05, 0.1, 0.15].map(p => (
               <button key={p}
                 onClick={() => setTip(p === 0 ? 0 : Math.round((subtotal * p) * 100)/100)}
-                className={`px-3 py-1.5 rounded-full border text-sm ${((p===0 && tip===0) || (p>0 && Math.abs(tip - subtotal*p) < 0.01)) ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-300'}`}>
-                {p===0 ? "No Tip" : `${Math.round(p*100)}%`}
+                className={`px-3 py-1.5 rounded-full border text-sm ₹{((p===0 && tip===0) || (p>0 && Math.abs(tip - subtotal*p) < 0.01)) ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-300'}`}>
+                {p===0 ? "No Tip" : `₹{Math.round(p*100)}%`}
               </button>
             ))}
             <div className="flex items-center gap-2 ml-2">
-              <span className="text-sm text-gray-600">$</span>
+              <span className="text-sm text-gray-600">₹</span>
               <input type="number" min="0" step="0.5" value={tip}
                 onChange={e => setTip(Number(e.target.value))}
                 className="w-24 border rounded-md px-2 py-1.5 text-sm"/>
@@ -129,27 +129,27 @@ export default function Cart() {
             <input type="number" min="0" step="1" value={shareCount}
               onChange={e => setShareCount(Number(e.target.value))}
               className="w-20 border rounded-md px-2 py-1.5 text-sm"/>
-            <span className="text-sm text-gray-600">{shareCount>0 ? `(per person: $${perHead.toFixed(2)})` : "(enter >0 to split)"}</span>
+            <span className="text-sm text-gray-600">{shareCount>0 ? `(per person: ₹₹{perHead.toFixed(2)})` : "(enter >0 to split)"}</span>
           </div>
 
           {/* Totals */}
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-gray-600">Subtotal</span>
-              <span className="text-gray-900">${subtotal.toFixed(2)}</span>
+              <span className="text-gray-900">₹{subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Tax</span>
-              <span className="text-gray-900">${tax.toFixed(2)}</span>
+              <span className="text-gray-900">₹{tax.toFixed(2)}</span>
             </div>
             <div className="flex justify-between border-t border-gray-200 pt-2 mt-2">
               <span className="font-medium text-gray-900">Total</span>
-              <span className="font-medium text-gray-900">${total.toFixed(2)}</span>
+              <span className="font-medium text-gray-900">₹{total.toFixed(2)}</span>
             </div>
             {shareCount>0 && (
               <div className="flex justify-between">
                 <span className="text-gray-600">Per person</span>
-                <span className="text-gray-900">${perHead.toFixed(2)}</span>
+                <span className="text-gray-900">₹{perHead.toFixed(2)}</span>
               </div>
             )}
           </div>

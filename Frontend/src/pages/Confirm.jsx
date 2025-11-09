@@ -12,7 +12,7 @@ export default function Confirm() {
         </div>
         <h1 className="mt-4 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Order Confirmed!</h1>
         <p className="mt-4 text-lg text-gray-600">
-          Your order has been placed successfully at <span className="font-medium text-gray-900">The Urban Eatery</span>.
+          Your order has been placed successfully at <span className="font-medium text-gray-900">The Coffee House</span>.
         </p>
         <div className="mt-10">
           <Link to="/" className="inline-flex items-center px-6 py-3 rounded-md text-white bg-gray-800 hover:bg-gray-700">

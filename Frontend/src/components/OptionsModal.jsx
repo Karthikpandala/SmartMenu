@@ -39,8 +39,8 @@ export default function OptionsModal({ open, onClose, item, onAdd }) {
                 {opt.size.map(o => (
                   <button key={o.label}
                     onClick={() => pick('size', o)}
-                    className={`border rounded-md px-3 py-2 text-sm ${selected.size?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
-                    {o.label} {o.delta ? `(+$${o.delta})` : ''}
+                    className={`border rounded-md px-3 py-2 text-sm ₹{selected.size?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
+                    {o.label} {o.delta ? `(+₹₹{o.delta})` : ''}
                   </button>
                 ))}
               </div>
@@ -54,7 +54,7 @@ export default function OptionsModal({ open, onClose, item, onAdd }) {
                 {opt.doneness.map(o => (
                   <button key={o.label}
                     onClick={() => pick('doneness', o)}
-                    className={`border rounded-md px-3 py-2 text-sm ${selected.doneness?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
+                    className={`border rounded-md px-3 py-2 text-sm ₹{selected.doneness?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
                     {o.label}
                   </button>
                 ))}
@@ -69,8 +69,8 @@ export default function OptionsModal({ open, onClose, item, onAdd }) {
                 {opt.side.map(o => (
                   <button key={o.label}
                     onClick={() => pick('side', o)}
-                    className={`border rounded-md px-3 py-2 text-sm ${selected.side?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
-                    {o.label} {o.delta ? `(+$${o.delta})` : ''}
+                    className={`border rounded-md px-3 py-2 text-sm ₹{selected.side?.label===o.label ? 'border-gray-900' : 'border-gray-300'}`}>
+                    {o.label} {o.delta ? `(+₹₹{o.delta})` : ''}
                   </button>
                 ))}
               </div>
@@ -86,8 +86,8 @@ export default function OptionsModal({ open, onClose, item, onAdd }) {
                   return (
                     <button key={o.label}
                       onClick={() => toggleExtra(o)}
-                      className={`border rounded-md px-3 py-2 text-sm ${active ? 'border-gray-900' : 'border-gray-300'}`}>
-                      {o.label} {o.delta ? `(+$${o.delta})` : ''}
+                      className={`border rounded-md px-3 py-2 text-sm ₹{active ? 'border-gray-900' : 'border-gray-300'}`}>
+                      {o.label} {o.delta ? `(+₹₹{o.delta})` : ''}
                     </button>
                   )
                 })}
@@ -97,11 +97,11 @@ export default function OptionsModal({ open, onClose, item, onAdd }) {
         </div>
 
         <div className="mt-5 flex justify-between items-center">
-          <div className="text-sm text-gray-600">Add-ons: {delta > 0 ? `+$${delta.toFixed(2)}` : '$0.00'}</div>
+          <div className="text-sm text-gray-600">Add-ons: {delta > 0 ? `+₹₹{delta.toFixed(2)}` : '₹0.00'}</div>
           <button
             onClick={() => { onAdd({ optionsSelected: selected }); onClose() }}
             className="px-4 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800">
-            Add ${(item.price + delta).toFixed(2)}
+            Add ₹{(item.price + delta).toFixed(2)}
           </button>
         </div>
       </div>

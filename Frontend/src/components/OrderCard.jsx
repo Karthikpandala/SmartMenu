@@ -8,7 +8,7 @@ export default function OrderCard({ id, time, table, minutesAgo, status, color, 
           <span className="font-medium">Order #{id}</span>
           <span className="text-gray-300 text-sm ml-2">{time}</span>
         </div>
-        <span className={`bg-${color}-100 text-${color}-800 text-xs font-medium px-2.5 py-0.5 rounded`}>{status}</span>
+        <span className={`bg-₹{color}-100 text-₹{color}-800 text-xs font-medium px-2.5 py-0.5 rounded`}>{status}</span>
       </div>
       <div className="p-4">
         <div className="mb-4">

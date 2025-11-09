@@ -5,7 +5,7 @@ import { staffOrders } from '../data/orders'
 export default function Staff() {
   return (
     <>
-      <Navbar title="QRMenu Staff" restaurant="The Urban Eatery" right={
+      <Navbar title="QRMenu Staff" restaurant="The Coffee House" right={
         <button className="text-gray-600 hover:text-gray-900" title="Logout">⎋</button>
       } />
 
@@ -33,7 +33,7 @@ export default function Staff() {
                   <span className="font-medium">Order #{o.id}</span>
                   <span className="text-gray-300 text-sm ml-2">{o.time}</span>
                 </div>
-                <span className={`${o.status.classes} text-xs font-medium px-2.5 py-0.5 rounded`}>{o.status.label}</span>
+                <span className={`₹{o.status.classes} text-xs font-medium px-2.5 py-0.5 rounded`}>{o.status.label}</span>
               </div>
               <div className="p-4">
                 <div className="mb-4">
@@ -74,7 +74,7 @@ export default function Staff() {
                 </div>
 
                 {/* Actions */}
-                <div className={`mt-4 ${o.type === 'pending' ? 'grid grid-cols-2 gap-2' : ''}`}>
+                <div className={`mt-4 ₹{o.type === 'pending' ? 'grid grid-cols-2 gap-2' : ''}`}>
                   {o.type === 'pending' && (
                     <>
                       <button className="py-2 px-4 border border-gray-300 rounded-md text-sm font-medium text-gray-800 bg-white hover:bg-gray-50">Reject</button>

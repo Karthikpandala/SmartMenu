@@ -19,7 +19,7 @@ export function ToastProvider({ children }) {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`px-4 py-2 rounded-md text-white shadow-md ${
+            className={`px-4 py-2 rounded-md text-white shadow-md ₹{
               t.type === "success" ? "bg-green-600" : "bg-gray-800"
             }`}
           >

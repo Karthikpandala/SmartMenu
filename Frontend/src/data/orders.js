@@ -6,11 +6,11 @@ export const staffOrders = [
     table: 12,
     minutesAgo: 5,
     items: [
-      { name: 'Truffle Arancini', meta: '1 × $12.00', price: '$12.00' },
-      { name: 'Burrata Salad', meta: '1 × $14.00', price: '$14.00' },
+      { name: 'Truffle Arancini', meta: '1 × ₹12.00', price: '₹12.00' },
+      { name: 'Burrata Salad', meta: '1 × ₹14.00', price: '₹14.00' },
       { note: 'No onions in the salad, please' }
     ],
-    total: '$26.00',
+    total: '₹26.00',
     type: 'pending',
   },
   {
@@ -20,10 +20,10 @@ export const staffOrders = [
     table: 8,
     minutesAgo: 20,
     items: [
-      { name: 'Filet Mignon', meta: '1 × $32.00', price: '$32.00' },
-      { name: 'Chocolate Soufflé', meta: '1 × $10.00', price: '$10.00' },
+      { name: 'Filet Mignon', meta: '1 × ₹32.00', price: '₹32.00' },
+      { name: 'Chocolate Soufflé', meta: '1 × ₹10.00', price: '₹10.00' },
     ],
-    total: '$44.20',
+    total: '₹44.20',
     type: 'preparing',
   },
   {
@@ -33,10 +33,10 @@ export const staffOrders = [
     table: 5,
     minutesAgo: 35,
     items: [
-      { name: 'Mushroom Risotto', meta: '2 × $22.00', price: '$44.00' },
-      { name: 'House Salad', meta: '1 × $8.00', price: '$8.00' },
+      { name: 'Mushroom Risotto', meta: '2 × ₹22.00', price: '₹44.00' },
+      { name: 'House Salad', meta: '1 × ₹8.00', price: '₹8.00' },
     ],
-    total: '$54.40',
+    total: '₹54.40',
     type: 'ready',
   },
 ]

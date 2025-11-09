@@ -20,7 +20,7 @@ export default function MenuItem({ title, desc, price, img, options }) {
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
         <p className="text-sm text-gray-600 mt-1">{desc}</p>
         <div className="mt-3 flex items-center justify-between">
-          <div className="text-gray-900 font-medium">${price.toFixed(2)}</div>
+          <div className="text-gray-900 font-medium">₹{price.toFixed(2)}</div>
           {options ? (
             <button
               onClick={() => setOpen(true)}
