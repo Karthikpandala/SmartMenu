@@ -83,7 +83,7 @@ export default function Menu() {
             <div className="w-full md:w-1/3 lg:w-1/4 mb-6 md:mb-0">
               <div className="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+                  src="https://lh3.googleusercontent.com/p/AF1QipPbBTtlVTxp4M8E6wcwfHdqzHzMHjFvTRN3Ach3=w243-h203-n-k-no-nu"
                   alt="Restaurant"
                   className="object-cover w-full h-full"
                 />
