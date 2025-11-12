@@ -9,7 +9,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["coffee", "espresso", "hot"],
-    img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+    img: "https://cafemalin.com/wp-content/uploads/2025/05/PHOTOS-RODUITS-81.jpg",
     options: { extras: [{ label: "Extra Shot", delta: 20 }] },
   },
   {
@@ -21,7 +21,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["coffee", "milk", "foam"],
-    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
+    img: "https://unsplash.com/photos/a-cup-of-cappuccino-on-a-saucer-with-a-spoon-rje7IsHtrDM",
     options: {
       size: [
         { label: "Small", delta: 0 },
@@ -43,7 +43,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["latte", "hazelnut", "coffee"],
-    img: "https://images.unsplash.com/photo-1615486364006-f66f7fa6b98c?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.texanerin.com/content/uploads/2023/03/hazelnut-latte-1200-image.jpg",
   },
   {
     title: "Iced Mocha",
@@ -54,7 +54,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["coffee", "chocolate", "cold"],
-    img: "https://images.unsplash.com/photo-1510626176961-4b37d0e8b4c7?auto=format&fit=crop&w=800&q=80",
+    img: "https://bakingmischief.com/wp-content/uploads/2019/05/iced-mocha-image-square.jpg",
   },
   {
     title: "Americano",
@@ -65,7 +65,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["black coffee", "espresso"],
-    img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+    img: "https://m.media-amazon.com/images/I/81DGM%2BFZ-9L._AC_UF894%2C1000_QL80_.jpg",
   },
   {
     title: "Green Tea",
@@ -76,7 +76,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["tea", "healthy", "antioxidant"],
-    img: "https://images.unsplash.com/photo-1545239705-1564e58b9e2a?auto=format&fit=crop&w=800&q=80",
+    img: "https://m.media-amazon.com/images/I/51a7Lp%2BHZYL._AC_UF894%2C1000_QL80_.jpg",
   },
   {
     title: "Peppermint Tea",
@@ -87,7 +87,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["tea", "mint", "herbal"],
-    img: "https://images.unsplash.com/photo-1504542982118-59308b40fe0c?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.publicdomainpictures.net/pictures/600000/velka/cup-of-peppermint-tea.jpg",
   },
   {
     title: "Earl Grey Tea",
@@ -98,7 +98,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["tea", "classic"],
-    img: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.mcleodrussel.co/cdn/shop/articles/Earl_Grey-02_1000x1000.jpg?v=1620819630",
   },
 
   // 🥤 MILKSHAKES --------------------------------------------------------
@@ -111,8 +111,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["shake", "strawberry", "sweet"],
-    img: "https://images.unsplash.com/photo-1600281517790-5e8d1ecf8c59?auto=format&fit=crop&w=800&q=80",
-    options: { extras: [{ label: "Whipped Cream", delta: 20 }] },
+    img: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?fm=jpg&q=60&w=3000",
   },
   {
     title: "Chocolate Milkshake",
@@ -123,7 +122,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["chocolate", "milkshake"],
-    img: "https://images.unsplash.com/photo-1588854337116-5baab5a17d13?auto=format&fit=crop&w=800&q=80",
+    img: "https://iambaker.net/wp-content/uploads/2024/06/Chocolate-Shake-2.jpg",
   },
   {
     title: "Oreo Milkshake",
@@ -134,7 +133,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["oreo", "shake"],
-    img: "https://images.unsplash.com/photo-1625940238527-b5b6a264b5b5?auto=format&fit=crop&w=800&q=80",
+    img: "https://tastesbetterfromscratch.com/wp-content/uploads/2024/06/Oreo-Milkshake24-1.jpg",
   },
   {
     title: "KitKat Milkshake",
@@ -145,7 +144,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["kitkat", "shake"],
-    img: "https://images.unsplash.com/photo-1588854337116-5baab5a17d13?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.nestleprofessional.co.uk/sites/default/files/styles/np_recipe_detail/public/2023-11/two-kitkat-milkshakes.jpg",
   },
 
   // 🍹 MOJITOS -----------------------------------------------------------
@@ -158,7 +157,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["lime", "mint", "soda"],
-    img: "https://images.unsplash.com/photo-1601924757220-6e6175bff7e3?auto=format&fit=crop&w=800&q=80",
+    img: "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito.jpg",
   },
   {
     title: "Bleed Blue Mojito",
@@ -169,7 +168,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["mojito", "blue", "refreshing"],
-    img: "https://images.unsplash.com/photo-1626818598685-93ffcb0cce39?auto=format&fit=crop&w=800&q=80",
+    img: "https://vaya.in/recipes/wp-content/uploads/2019/05/Sparkling-Blue-Mocktail.jpg",
   },
   {
     title: "Green Apple Mojito",
@@ -180,7 +179,7 @@
     spicy: 0,
     dietary: ["vegan"],
     tags: ["apple", "mint", "mocktail"],
-    img: "https://images.unsplash.com/photo-1617196030864-5dcf89d16676?auto=format&fit=crop&w=800&q=80",
+    img: "https://static.toiimg.com/photo/60258570.cms",
   },
 
   // 🥪 SANDWICHES -------------------------------------------------------
@@ -193,8 +192,7 @@
     spicy: 1,
     dietary: ["vegetarian"],
     tags: ["sandwich", "grilled", "cheese"],
-    img: "https://images.unsplash.com/photo-1606755962773-8d60c82bcb84?auto=format&fit=crop&w=800&q=80",
-    options: { extras: [{ label: "Add Extra Cheese", delta: 20 }] },
+    img: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-recipe.jpg",
   },
   {
     title: "Paneer Tikka Sandwich",
@@ -205,7 +203,7 @@
     spicy: 2,
     dietary: ["vegetarian"],
     tags: ["paneer", "spicy", "sandwich"],
-    img: "https://images.unsplash.com/photo-1627308595151-0f6c3a9c0f63?auto=format&fit=crop&w=800&q=80",
+    img: "https://i0.wp.com/kalimirchbysmita.com/wp-content/uploads/2018/10/Paneer-Tikka-Sandwich-Insta-02.jpg",
   },
   {
     title: "Chicken Club Sandwich",
@@ -216,7 +214,7 @@
     spicy: 1,
     dietary: [],
     tags: ["chicken", "club", "sandwich"],
-    img: "https://images.unsplash.com/photo-1601050690597-98f34a359d09?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.thecookierookie.com/wp-content/uploads/2024/04/featured-chicken-club-sandwich-recipe.jpg",
   },
 
   // 🍔 BURGERS -----------------------------------------------------------
@@ -229,13 +227,7 @@
     spicy: 1,
     dietary: ["vegetarian"],
     tags: ["burger", "veg"],
-    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80",
-    options: {
-      extras: [
-        { label: "Extra Patty", delta: 40 },
-        { label: "Add Cheese", delta: 20 },
-      ],
-    },
+    img: "https://www.indianhealthyrecipes.com/wp-content/uploads/2016/02/veg-burger-recipe-1.jpg",
   },
   {
     title: "OG Chicken Burger",
@@ -246,7 +238,7 @@
     spicy: 1,
     dietary: [],
     tags: ["burger", "chicken"],
-    img: "https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80",
+    img: "https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.bs/files/New_OCS_detail.png",
   },
   {
     title: "BBQ Chicken Burger",
@@ -257,7 +249,7 @@
     spicy: 2,
     dietary: [],
     tags: ["bbq", "burger"],
-    img: "https://images.unsplash.com/photo-1565958011705-44d2a6f46b80?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.howsweeteats.com/wp-content/uploads/2011/04/bbqburgers-6.jpg",
   },
 
   // 🍕 PIZZAS ------------------------------------------------------------
@@ -270,15 +262,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["pizza", "cheese", "classic"],
-    img: "https://images.unsplash.com/photo-1601924638867-3ec4c8e6e9f7?auto=format&fit=crop&w=800&q=80",
-    options: {
-      size: [
-        { label: "7 inch", delta: 0 },
-        { label: "10 inch", delta: 80 },
-        { label: "12 inch", delta: 140 },
-      ],
-      extras: [{ label: "Extra Cheese", delta: 30 }],
-    },
+    img: "https://png.pngtree.com/png-clipart/20250107/original/pngtree-top-view-of-a-margherita-pizza-png-image_18848224.png",
   },
   {
     title: "Paneer Tikka Pizza",
@@ -289,7 +273,7 @@
     spicy: 2,
     dietary: ["vegetarian"],
     tags: ["paneer", "pizza", "spicy"],
-    img: "https://images.unsplash.com/photo-1628840042765-356c1a333791?auto=format&fit=crop&w=800&q=80",
+    img: "https://blendofspicesbysara.com/wp-content/uploads/2020/05/Screenshot_20200509-234417.png",
   },
   {
     title: "Chicken BBQ Pizza",
@@ -300,7 +284,7 @@
     spicy: 1,
     dietary: [],
     tags: ["pizza", "bbq", "chicken"],
-    img: "https://images.unsplash.com/photo-1628840042765-356c1a333791?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.allrecipes.com/thmb/qZ7LKGV1_RYDCgYGSgfMn40nmks/AR-24878-bbq-chicken-pizza-beauty.jpg",
   },
 
   // 🍟 SNACKS ------------------------------------------------------------
@@ -313,7 +297,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["fries", "snack"],
-    img: "https://images.unsplash.com/photo-1565958011705-44d2a6f46b80?auto=format&fit=crop&w=800&q=80",
+    img: "https://aubreyskitchen.com/wp-content/uploads/2021/01/frozen-french-fries-in-air-fryer.jpg",
   },
   {
     title: "Peri Peri Fries",
@@ -324,7 +308,7 @@
     spicy: 2,
     dietary: ["vegetarian"],
     tags: ["fries", "spicy"],
-    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80",
+    img: "https://cookingwithparita.com/wp-content/uploads/2022/10/image-of-baked-crispy-peri-peri-fries-recipe-2.jpg",
   },
   {
     title: "Cheese Balls",
@@ -335,7 +319,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["cheese", "snack"],
-    img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80",
+    img: "https://mmmithaiwala.in/wp-content/uploads/2023/10/cheeseballs.jpg",
   },
 
   // 🍰 DESSERTS ----------------------------------------------------------
@@ -348,7 +332,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["dessert", "brownie"],
-    img: "https://images.unsplash.com/photo-1599785209790-0889a8a27d8b?auto=format&fit=crop&w=800&q=80",
+    img: "https://recipesblob.oetker.in/assets/0e7149831748458c9502e361e889f726/1272x764/brownie-with-vanilla-ice-cream.jpg",
   },
   {
     title: "Cheesecake",
@@ -359,7 +343,7 @@
     spicy: 0,
     dietary: ["vegetarian"],
     tags: ["dessert", "cake"],
-    img: "https://images.unsplash.com/photo-1625940238527-b5b6a264b5b5?auto=format&fit=crop&w=800&q=80",
+    img: "https://www.jocooks.com/wp-content/uploads/2018/11/cheesecake-1-22-500x500.jpg",
   },
 
   // 🏆 SPECIALS ----------------------------------------------------------
@@ -372,7 +356,7 @@
     spicy: 2,
     dietary: ["vegetarian"],
     tags: ["special", "fries"],
-    img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80",
+    img: "https://i.pinimg.com/736x/41/86/6a/41866a9710e4ef81b72be488633aa3d6.jpg",
   },
   {
     title: "Monster Burger Meal",
@@ -383,6 +367,6 @@
     spicy: 2,
     dietary: [],
     tags: ["burger", "combo"],
-    img: "https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80",
+    img: "",
   },
 ];
